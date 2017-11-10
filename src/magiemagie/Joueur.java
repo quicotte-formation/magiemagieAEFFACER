@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Joueur{
     
-    protected String nom;
-    protected ArrayList<Carte> cartes = new ArrayList<>();
+    private String nom;
+    private ArrayList<Carte> cartes = new ArrayList<>();
 
     @Override
     public String toString() {

@@ -10,20 +10,32 @@ package magiemagie;
  * @author Administrateur
  */
 public class Carte {
-    
-    public enum TypeCarte{
-        
+
+    public enum TypeCarte {
+
         BAVE_DE_CRAPAUD,
         AILE_DE_CHAUVE_SOURIS,
         LAPIS_LAZULI,
         MANDRAGORE,
         CORNE_DE_LICORNE
     }
-    
-    protected TypeCarte type;
+
+    private TypeCarte type;
 
     @Override
-    public String toString() {
+    public boolean equals(Object obj) {
+
+        Carte carteParam = (Carte) obj;
+
+        if (this.getType() == carteParam.getType()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+@Override
+        public String toString() {
         return type.toString();
     }
 
@@ -34,6 +46,5 @@ public class Carte {
     public void setType(TypeCarte type) {
         this.type = type;
     }
-    
-    
+
 }
